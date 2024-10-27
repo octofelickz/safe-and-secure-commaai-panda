@@ -1,8 +1,7 @@
 name: jenkins scan
 
 on:
-  issue_comment:
-    types: [created, edited]
+  workflow_dispatch:
 
 jobs:
   # TODO: gc old branches in a separate job in this workflow
