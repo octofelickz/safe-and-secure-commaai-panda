@@ -1,0 +1,11 @@
+guideline-recategorizations:
+- rule-id: "RULE-11-4"
+  justification: "Advisory: casting from void pointer to type pointer is ok. Done by STM libraries as well"
+  category: "disapplied"
+- rule-id: "DIR-4-6"
+  justification: "Fixed-width integers not used in this project"
+  category: "disapplied"
+deviations:
+- rule-id: "RULE-11-3"
+  code-identifier: "cppcheck-suppress misra-c2012-11.3"
+  justification: "Alignment checked before casting"
