@@ -28,6 +28,8 @@ jobs:
           languages: cpp
           packs: advanced-security/misra-c-coding-standards@2.37.1
           tools: https://github.com/github/codeql-action/releases/download/codeql-bundle-v2.16.6/codeql-bundle-linux64.tar.gz
+      # Process disapply or deviate against Coding Standards rules which do not need to be adhered to within a given project via coding-standards.yml
+      - uses: github/codeql-coding-standards/apply-configuration@v2.37.1     
       - name: Build FW
         run: scons
       - name: Perform CodeQL Analysis
